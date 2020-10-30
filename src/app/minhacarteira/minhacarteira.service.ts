@@ -7,7 +7,7 @@ interface Response {
   };
   disclaimer: string;
   bpi: {
-    [key in 'USD' | 'BRL' ]: {
+    [key in 'BRL' ]: {
       symbol: string;
       description: string;
       rate_float: number;
@@ -37,7 +37,7 @@ export class MinhacarteiraService {
       this.currentPrice = data;
       this.updateList.push({
         timestamp: this.lastUpdate,
-        BRL: this.currentPrice.bpi.BRL.rate_float
+        BRL:Math.random()* (100 - 1) + 1
       });
     });
   }

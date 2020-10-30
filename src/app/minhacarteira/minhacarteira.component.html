@@ -2,13 +2,13 @@
 <div *ngIf="getCurrentPrice()">
   <hr/>
   <div>
-    <input type="button" value="Valores" (click)="update()"/>
+    <input type="button" value="Comprar - BRL" (click)="update()"/>
     <span>Total de compras em {{this.minhacarteiraService.lastUpdate | date:"full"}}</span>
   </div>
   <hr/>
   <h2>Data/hora</h2>
   <div>{{this.getCurrentPrice().time.updated}}</div>
-  <h2>Taxa</h2>
+  <h2>Crédito</h2>
  
   <h3>{{this.getCurrentPrice().bpi.BRL .description}}</h3>
 
