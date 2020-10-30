@@ -7,7 +7,7 @@ interface Response {
   };
   disclaimer: string;
   bpi: {
-    [key in 'USD' | 'BRL' ]: {
+    [key in 'BRL' ]: {
       symbol: string;
       description: string;
       rate_float: number;
