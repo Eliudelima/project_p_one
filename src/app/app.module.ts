@@ -6,12 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { HomeComponent } from './home/home.component';
+import { MinhacarteiraComponent } from './minhacarteira/minhacarteira.component';
+import { MinhacarteiraService } from './minhacarteira/minhacarteira.service';
 import { BitcoinComponent } from './bitcoin/bitcoin.component';
 import { BitcoinService } from './bitcoin/bitcoin.service';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GithubComponent } from './github/github.component';
-import { GithubService } from './github/github.service';
+
 
 
 
@@ -29,14 +30,14 @@ import { GithubService } from './github/github.service';
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'bitcoin', component: BitcoinComponent},
-      {path: 'github', component: GithubComponent}, 
-                   
+      {path: 'minhacarteira', component: MinhacarteiraComponent},
+      
             
     ])
   ],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, BitcoinComponent, GithubComponent ],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, BitcoinComponent, MinhacarteiraComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [BitcoinService, GithubService],
+  providers: [BitcoinService, MinhacarteiraService],
  
 })
 export class AppModule { }

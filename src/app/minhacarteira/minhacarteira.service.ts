@@ -24,7 +24,7 @@ interface PriceUpdate {
 
 
 @Injectable()
-export class GithubService {
+export class MinhacarteiraService {
   currentPrice: Response;
   lastUpdate: Date;
 

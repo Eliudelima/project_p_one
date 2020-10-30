@@ -1,10 +1,9 @@
-
 <hello name="{{ name }}"></hello>
 <div *ngIf="getCurrentPrice()">
   <hr/>
   <div>
     <input type="button" value="Atualizar" (click)="update()"/>
-    <span>Atualizado em {{this.githubService.lastUpdate | date:"full"}}</span>
+    <span>Atualizado em {{this.minhacarteiraService.lastUpdate | date:"full"}}</span>
   </div>
   <hr/>
   <h2>Data/hora</h2>
@@ -30,7 +29,7 @@
       <th>BRL</th>
       
     </tr>
-    <tr *ngFor="let price of this.githubService.updateList">
+    <tr *ngFor="let price of this.minhacarteiraService.updateList">
       <td>{{price.timestamp | date:"full"}}</td>
       <td>{{price.USD | currency}}</td>
       <td>{{price.BRL | currency}}</td>
