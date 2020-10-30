@@ -7,7 +7,7 @@ import { MinhacarteiraService } from './minhacarteira.service';
   styleUrls: ['./minhacarteira.component.css']
 })
 export class MinhacarteiraComponent implements OnInit {
-  name = 'Minhacarteira$';
+  name = 'MinhaCarteira';
 
 
 
