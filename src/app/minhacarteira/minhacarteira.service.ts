@@ -18,7 +18,6 @@ interface Response {
 
 interface PriceUpdate {
   timestamp: Date;
-  USD: number;
   BRL: number;
 }
 
@@ -38,7 +37,6 @@ export class MinhacarteiraService {
       this.currentPrice = data;
       this.updateList.push({
         timestamp: this.lastUpdate,
-        USD: this.currentPrice.bpi.USD.rate_float,
         BRL: this.currentPrice.bpi.BRL.rate_float
       });
     });

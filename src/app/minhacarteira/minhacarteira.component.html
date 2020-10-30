@@ -2,18 +2,14 @@
 <div *ngIf="getCurrentPrice()">
   <hr/>
   <div>
-    <input type="button" value="Atualizar" (click)="update()"/>
-    <span>Atualizado em {{this.minhacarteiraService.lastUpdate | date:"full"}}</span>
+    <input type="button" value="Valores" (click)="update()"/>
+    <span>Total de compras em {{this.minhacarteiraService.lastUpdate | date:"full"}}</span>
   </div>
   <hr/>
   <h2>Data/hora</h2>
   <div>{{this.getCurrentPrice().time.updated}}</div>
-  <h2>Taxas</h2>
-  <h3>{{this.getCurrentPrice().bpi.USD.description}}</h3>
-  <h4>
-    <span [innerHTML]="this.getCurrentPrice().bpi.USD.symbol"></span>
-    {{this.getCurrentPrice().bpi.USD.rate}}
-  </h4>
+  <h2>Taxa</h2>
+ 
   <h3>{{this.getCurrentPrice().bpi.BRL .description}}</h3>
 
 <h4>
@@ -22,16 +18,14 @@
   </h4>
  
   <hr/>
-  <table border="1">
+  <table border="4">
     <tr>
       <th>Data/hora</th>
-      <th>USD</th>
       <th>BRL</th>
       
     </tr>
     <tr *ngFor="let price of this.minhacarteiraService.updateList">
       <td>{{price.timestamp | date:"full"}}</td>
-      <td>{{price.USD | currency}}</td>
       <td>{{price.BRL | currency}}</td>
     </tr>
   </table>
